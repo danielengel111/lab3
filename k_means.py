@@ -35,6 +35,13 @@ class KMeans:
             if sum(changes) == 0:  # if everyone is False then sum is 0
                 break
 
+    def print_distance(self,seed):
+        sum=0
+        for cluster in self._clusters:
+            for point in cluster._points:
+                sum+=point.distance_to(cluster.centroid)
+        print(f"{seed} {self._k} {sum}")
+
     def print_results(self):
         total_loss = 0
         total_SSE = 0

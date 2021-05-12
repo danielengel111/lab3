@@ -38,9 +38,7 @@ def run_kmeans():
     if len(argv) == 5:
         for random_seed in [1, 12]:
             for k in [3,4,5]:
-            #k = int(argv[1])
                 for num_iterations in [10]:
-            #num_iterations = int(argv[2])
                     if k <= 1 or num_iterations <= 0:
                         print('Please provide correct parameters')
                         exit(1)
@@ -49,7 +47,6 @@ def run_kmeans():
                         exit(1)
 
                     itirate_kmeans(k, num_iterations, random_seed, points)
-                        #random_seed = int(argv[4])
 
 
 if __name__ == '__main__':

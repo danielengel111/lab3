@@ -36,6 +36,11 @@ class KMeans:
                 break
 
     def print_distance(self,seed):
+        """
+        prints the results based on the table
+        :param seed: the seed used in the run
+        :return:
+        """
         sum=0
         for cluster in self._clusters:
             for point in cluster._points:

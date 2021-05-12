@@ -6,16 +6,14 @@ class Point:
             self.set_coordinates(coordinates)
 
     def distance_to(self, coordinates):
+        """
+        calculates the L1 distance between self and coordinate
+        :param coordinates: the second coordinate
+        :return: the L1 distance
+        """
         if not self.coordinates:
             print('Point', self.name, 'not initiated. Please provide coordinates in init or call set_coordinates')
             return 0
-        #dis=0
-        #for my, his in zip(self.coordinates, coordinates):
-        #    if((my-his)<0):
-        #        dis+=his-my
-        #    else:
-        #        dis+=my-his
-        #return dis
         return sum([abs(my-his) for my, his in zip(self.coordinates, coordinates)])
 
     def set_coordinates(self, coordinates):
